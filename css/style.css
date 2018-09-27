@@ -1,0 +1,48 @@
+* {
+    transition: all 0.5s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+}
+
+body {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.accordionX {
+    background-color: dodgerblue;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    padding: 18px;
+    text-align: left;
+    border: 0;
+    outline: none;
+}
+
+.accordionX:after {
+    content: "\0002B";
+    float: right;
+    color: #fff;
+    margin-left: 5px;
+    font-size: 12px;
+    font-size: medium;
+}
+
+.active, .accordionX:hover {
+    background-color: royalblue;
+}
+
+.active:after {
+    content: "\02212";
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: #fff;
+    max-height: 0;
+    overflow: hidden;
+}
